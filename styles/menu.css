@@ -1,0 +1,293 @@
+#menu {
+    background-image:  url(img/Sem\ Título-1.jpg);
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir toda a seção */
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    width: 98%;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 120vh;
+}
+
+#menu .section-title{
+    font-size: 3rem;
+
+    margin-bottom: 1px;
+}
+
+#menu .section-subtitle{
+    color: #ffffff;
+        margin-bottom: 1px;
+    font-size: 1.5rem;
+
+}
+
+#dishes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+    .dish-image{
+    width: 100%;
+}
+.dish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    gap: 18px;
+    width: 25%;
+    padding: 20px;
+    background-color: var(--color-neutral-0);
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.dish-description {
+    color: #ffffff;
+    text-align: center;
+}
+
+.dish-rate i {
+    color: var(--color-primary-6);
+}
+
+.dish-price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.img-home{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {  
+    min-width: 100%;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(202, 120, 120, 0);
+    border: none; 
+    padding: 0px;
+    cursor: pointer;
+    bottom: -10px;
+}
+
+
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+
+
+
+@media screen and (max-width: 1170px) {
+    #dishes {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dish {
+        width: calc(50% - 12px);
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .dish {
+        width: 100%;
+    }
+
+    #menu .section-subtitle {
+        text-align: center;
+    }
+} 
+
+
+
+
+  
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica fixo na tela */
+    z-index: 1; /* Fica acima de tudo */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Permite rolagem se necessário */
+    background-color: rgb(0,0,0); /* Cor de fundo */
+    background-color: rgba(0,0,0,0.4); /* Cor de fundo com opacidade */
+    transition: ease-in-out ; 
+    opacity: 0; /* Inicia com opacidade 0 para permitir a transição */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+  
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% do topo e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura do conteúdo */
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+  
+.close {
+    color: #707070;
+    float: right;
+    font-size: 28px;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-prod{
+    display: flex;
+    gap: 10px;
+}
+  
+
+
+
+
+
+
+.cards-container {
+    display: flex;
+    gap: 35px; /* Espaçamento entre os cards */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilizando cada card */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 350px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+/* Estilizando a imagem do card */
+.card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Estilizando o título do card */
+.card h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+/* Estilizando a descrição */
+.card p {
+    font-size: 1em;
+    color: #333;
+    margin: 10px 0;
+}
+
+
+
+/* Container dos cards */
+.cards-container {
+    display: flex;
+    gap: 35px; /* Espaçamento entre os cards */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+/* Estilizando o título do card */
+.card h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+/* Estilizando o preço */
+.price {
+    font-size: 1.2em;
+    color: #333;
+    margin: 20px 0;
+}
+
+.price span {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilizando o botão */
+button {
+    background-color: #ffbe00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Mudança de cor ao passar o mouse no botão */
+button:hover {
+    background-color: #ffd864;
+}
+
+/* Estilizando a lista de benefícios */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+li {
+    font-size: 0.9em;
+    margin: 10px 0;
+    color: #333;
+}
